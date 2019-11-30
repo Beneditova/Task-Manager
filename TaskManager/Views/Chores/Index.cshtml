@@ -1,0 +1,18 @@
+﻿@model IEnumerable<TaskManager.Models.Chore>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<div id="tableDiv">
+    @Html.Partial("_ChoresTable", Model)
+</div>
+
+@Scripts.Render("~/Scripts/jquery.unobtrusive-ajax.min.js")
+@Scripts.Render("~/Scripts/Custom_Scripts/BuildTable.js")
