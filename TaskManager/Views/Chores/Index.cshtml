@@ -1,0 +1,30 @@
+﻿@model IEnumerable<TaskManager.Models.Chore>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<head>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+</head>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<div id="tableDiv">
+    @Html.Partial("_ChoresTable", Model)
+    <script type="text/javascript">
+        $('#btn_click').click(function () {
+            alert('You Clicked Button');
+        });
+    </script>
+</div>
+
+@section Scripts{
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Custom_Scripts/BuildTable.js"></script>
+}
+
+
